@@ -1,0 +1,450 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+:root{
+    --color-bg:linear-gradient(to top,hsl(0, 0%, 100%), hsl(309, 48%, 63%), hwb(219 15% 7%), #1a233a 99%);
+    --line-color:linear-gradient(to left top, rgb(3, 242, 3),  #1a233a);
+    --leaf-color:linear-gradient(to bottom, #220ce9 , rgb(254, 250, 0) , hwb(355 20% 21%) 99%);
+}   
+body{
+    background-image: var(--color-bg);
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+.audio{
+    
+   position: absolute;
+}
+.Flower{
+    position: relative;
+}
+.Flower-Wrap{
+    position: absolute;
+    left:45%;
+    bottom: -1vmin;
+}
+.Flower-Line{
+    width: 4vmin;
+    height: 60vmin;
+    background-image: var(--line-color);
+    border-radius: 4vmin;
+    
+}
+.Flower-Center{
+    position: absolute;
+    top: 1vmin;
+    left: 50%;
+    transform: translateX(-50%) rotate(-5deg);
+    width: 2vmin;
+    height: 2vmin;
+    background-color: hsl(56, 100%, 50%);
+}
+.Flower_Leaf{
+    
+    position: absolute;
+    left: 50%;
+    bottom: 2vmin;
+    transform: translateX(-50%);
+    width: 7vmin;
+    height: 15vmin;
+    background-image: var(--leaf-color);
+    clip-path: ellipse(50% 50% at 50% 50% );
+    transform-origin: center bottom;
+    
+    animation: open-flower 5s 1s backwards ;
+    
+    
+}
+.Flower_Leaf-1{
+    width: 10vmin;
+    height: 12vmin;
+    bottom: 3vmin;
+    border-radius: 50% 50% 50% / 80% 80% 20% 20%;
+    background-color:  hsl(247, 100%, 50%);
+    animation: open-flower 1.4s 1s backwards ;
+    animation: flower-fall-down 5s 2s forwards infinite ;
+    
+    
+}
+.Flower_Leaf-2{
+    
+    transform: translateX(-50%) rotate(-30deg);
+    
+}
+
+.Flower_Leaf-3{
+    transform: translateX(-50%) rotate(-50deg);
+}
+.Flower_Leaf-4{
+    transform: translateX(-50%) rotate(-70deg);
+}
+.Flower_Leaf-7-1{
+    transform: translateX(-50%) rotate(-90deg);
+}
+.Flower_Leaf-7-2{
+    transform: translateX(-50%) rotate(-110deg);
+}
+.Flower_Leaf-7-6{
+    transform: translateX(-50%) rotate(-130deg);
+}
+.Flower_Leaf-7-8{
+    transform: translateX(-50%) rotate(-160deg);
+}
+.Flower_Leaf-5{
+    transform: translateX(-50%) rotate(30deg);
+}
+.Flower_Leaf-6{
+    transform: translateX(-50%) rotate(50deg);
+}
+.Flower_Leaf-7{
+    transform: translateX(-50%) rotate(70deg);
+}
+.Flower_Leaf-7-3{
+    transform: translateX(-50%) rotate(90deg);
+}
+.Flower_Leaf-7-4{
+    transform: translateX(-50%) rotate(110deg);
+}
+.Flower_Leaf-7-5{
+    transform: translateX(-50%) rotate(130deg);
+}
+.Flower_Leaf-7-7{
+    transform: translateX(-50%) rotate(160deg);
+}
+.Flower_Leaf-8{
+    width: 13vmin;
+    height: 11vmin;
+    bottom: 6vmin;
+    border-radius: none;
+    clip-path: none;
+    left: -30%;
+    border-radius: 10vmin 2vmin 10vmin 2vmin;
+  
+    background-image: var(--fall--leaf-color);
+    transform: rotate(-55deg);
+    animation: flower-fall-down 5s 2s forwards infinite ;
+    
+    
+}
+.Flower-fall-down{
+    animation: flower-fall-down 5s 2s forwards infinite ;
+    animation: .8s beat backwards infinite;
+}
+
+@keyframes open-flower{
+    0%{
+        transform: translateX(-50%)rotate(0);
+    }
+}
+@keyframes open-flower-middle{
+    0%{
+        opacity: 0;
+        transform: translateX(-50%) scale(0);
+    }
+}
+@keyframes flower-fall-down {
+    0%{
+        transform: rotate(-55deg);
+    }
+    50%{
+        bottom: 10vmin;
+        transform: rotateX(-160deg);
+    }
+    100%{
+        transform: translate(2vmin, 52vmin) rotate(210deg);
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+
+  body{
+      background-image: var(--color-bg);
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: hidden;
+  }
+      .Flower-Wrap{
+          position: absolute;
+          left:45%;
+          bottom: -1vmin;
+      }
+      .Flower-Line{
+          width: 6vmin;
+          height: 65vmin;
+          background-image: var(--line-color);
+          border-radius: 4vmin;
+      }
+      .Flower-Center{
+          position: absolute;
+          top: 1vmin;
+          left: 50%;
+          transform: translateX(-50%) rotate(-5deg);
+          width: 5vmin;
+          height: 5vmin;
+          background-color: hsl(56, 100%, 50%);
+      }
+      .Flower_Leaf{
+          
+          position: absolute;
+          left: 50%;
+          bottom: 2vmin;
+          transform: translateX(-50%);
+          width: 10vmin;
+          height: 23vmin;
+          background-image: var(--leaf-color);
+          clip-path: ellipse(50% 50% at 50% 50% );
+          transform-origin: center bottom;
+          
+          animation: open-flower 5s 1s backwards ;
+          
+          
+      }
+      .Flower_Leaf-1{
+          width: 10vmin;
+          height: 23vmin;
+          bottom: 3vmin;
+          border-radius: 50% 50% 50% / 80% 80% 20% 20%;
+          background-color:  hsl(247, 100%, 50%);
+          animation: open-flower 1.4s 1s backwards ;
+          animation: flower-fall-down 7s 2s forwards infinite ;
+          
+      }
+      .Flower_Leaf-2{
+          transform: translateX(-50%) rotate(-30deg);
+          
+      }
+      
+      .Flower_Leaf-3{
+          transform: translateX(-50%) rotate(-50deg);
+      }
+      .Flower_Leaf-4{
+          transform: translateX(-50%) rotate(-70deg);
+      }
+      .Flower_Leaf-7-1{
+          transform: translateX(-50%) rotate(-90deg);
+      }
+      .Flower_Leaf-7-2{
+          transform: translateX(-50%) rotate(-110deg);
+      }
+      .Flower_Leaf-7-6{
+          transform: translateX(-50%) rotate(-130deg);
+      }
+      .Flower_Leaf-7-8{
+          transform: translateX(-50%) rotate(-160deg);
+      }
+      .Flower_Leaf-5{
+          transform: translateX(-50%) rotate(30deg);
+      }
+      .Flower_Leaf-6{
+          transform: translateX(-50%) rotate(50deg);
+      }
+      .Flower_Leaf-7{
+          transform: translateX(-50%) rotate(70deg);
+      }
+      .Flower_Leaf-7-3{
+          transform: translateX(-50%) rotate(90deg);
+      }
+      .Flower_Leaf-7-4{
+          transform: translateX(-50%) rotate(110deg);
+      }
+      .Flower_Leaf-7-5{
+          transform: translateX(-50%) rotate(130deg);
+      }
+      .Flower_Leaf-7-7{
+          transform: translateX(-50%) rotate(160deg);
+      }
+      .Flower_Leaf-8{
+          width: 10vmin;
+          height: 23vmin;
+          bottom: 6vmin;
+          border-radius: none;
+          clip-path: none;
+          left: -30%;
+          border-radius: 10vmin 2vmin 10vmin 2vmin;
+        
+          background-image: var(--fall--leaf-color);
+          transform: rotate(-55deg);
+          animation: flower-fall-down 8s 2s forwards infinite ;
+          
+      }
+      .Flower-fall-down{
+          animation: flower-fall-down 5s 2s forwards infinite ;
+      }
+      
+      @keyframes open-flower{
+          0%{
+              transform: translateX(-50%)rotate(0);
+          }
+      }
+      @keyframes open-flower-middle{
+          0%{
+              opacity: 0;
+              transform: translateX(-50%) scale(0);
+          }
+      }
+      @keyframes flower-fall-down {
+          0%{
+              transform: rotate(-55deg);
+          }
+          50%{
+              bottom: 10vmin;
+              transform: rotateX(-160deg);
+          }
+          100%{
+              transform: translate(10vmin, 150vmin) rotate(210deg);
+          }
+      }
+        }
+  
+  
+@media screen and (max-width: 460px) {
+    
+body{
+    background-image: var(--color-bg);
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+    .Flower-Wrap{
+        position: absolute;
+        left:45%;
+        bottom: -1vmin;
+    }
+    .Flower-Line{
+        width: 8vmin;
+        height: 110vmin;
+        background-image: var(--line-color);
+        border-radius: 4vmin;
+    }
+    .Flower-Center{
+        position: absolute;
+        top: 1vmin;
+        left: 50%;
+        transform: translateX(-50%) rotate(-5deg);
+        width: 2vmin;
+        height: 2vmin;
+        background-color: hsl(56, 100%, 50%);
+    }
+    .Flower_Leaf{
+        
+        position: absolute;
+        left: 50%;
+        bottom: 2vmin;
+        transform: translateX(-50%);
+        width: 15vmin;
+        height: 30vmin;
+        background-image: var(--leaf-color);
+        clip-path: ellipse(50% 50% at 50% 50% );
+        transform-origin: center bottom;
+        
+        animation: open-flower 5s 1s backwards ;
+        
+        
+    }
+    .Flower_Leaf-1{
+        width: 15vmin;
+        height: 30vmin;
+        bottom: 3vmin;
+        border-radius: 50% 50% 50% / 80% 80% 20% 20%;
+        background-color:  hsl(247, 100%, 50%);
+        animation: open-flower 1.4s 1s backwards ;
+        animation: flower-fall-down 7s 2s forwards infinite ;
+        
+    }
+    .Flower_Leaf-2{
+        transform: translateX(-50%) rotate(-30deg);
+        
+    }
+    
+    .Flower_Leaf-3{
+        transform: translateX(-50%) rotate(-50deg);
+    }
+    .Flower_Leaf-4{
+        transform: translateX(-50%) rotate(-70deg);
+    }
+    .Flower_Leaf-7-1{
+        transform: translateX(-50%) rotate(-90deg);
+    }
+    .Flower_Leaf-7-2{
+        transform: translateX(-50%) rotate(-110deg);
+    }
+    .Flower_Leaf-7-6{
+        transform: translateX(-50%) rotate(-130deg);
+    }
+    .Flower_Leaf-7-8{
+        transform: translateX(-50%) rotate(-160deg);
+    }
+    .Flower_Leaf-5{
+        transform: translateX(-50%) rotate(30deg);
+    }
+    .Flower_Leaf-6{
+        transform: translateX(-50%) rotate(50deg);
+    }
+    .Flower_Leaf-7{
+        transform: translateX(-50%) rotate(70deg);
+    }
+    .Flower_Leaf-7-3{
+        transform: translateX(-50%) rotate(90deg);
+    }
+    .Flower_Leaf-7-4{
+        transform: translateX(-50%) rotate(110deg);
+    }
+    .Flower_Leaf-7-5{
+        transform: translateX(-50%) rotate(130deg);
+    }
+    .Flower_Leaf-7-7{
+        transform: translateX(-50%) rotate(160deg);
+    }
+    .Flower_Leaf-8{
+        width: 15vmin;
+        height: 30vmin;
+        bottom: 6vmin;
+        border-radius: none;
+        clip-path: none;
+        left: -30%;
+        border-radius: 10vmin 2vmin 10vmin 2vmin;
+      
+        background-image: var(--fall--leaf-color);
+        transform: rotate(-55deg);
+        animation: flower-fall-down 8s 2s forwards infinite ;
+        
+    }
+    .Flower-fall-down{
+        animation: flower-fall-down 5s 2s forwards infinite ;
+    }
+    
+    @keyframes open-flower{
+        0%{
+            transform: translateX(-50%)rotate(0);
+        }
+    }
+    @keyframes open-flower-middle{
+        0%{
+            opacity: 0;
+            transform: translateX(-50%) scale(0);
+        }
+    }
+    @keyframes flower-fall-down {
+        0%{
+            transform: rotate(-55deg);
+        }
+        50%{
+            bottom: 10vmin;
+            transform: rotateX(-160deg);
+        }
+        100%{
+            transform: translate(10vmin, 150vmin) rotate(210deg);
+        }
+    }
+      }
+
